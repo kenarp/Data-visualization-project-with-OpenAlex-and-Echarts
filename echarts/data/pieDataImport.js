@@ -1,0 +1,707 @@
+const data = [
+  {
+    "Mode (computer interface)": {
+      name: "Mode (computer interface)",
+      id: "https://openalex.org/C48677424",
+      level: 2,
+      description: "distinct setting within a computer program interface",
+    },
+    Usability: {
+      name: "Usability",
+      id: "https://openalex.org/C170130773",
+      level: 2,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+      children: [
+        "Technology acceptance model",
+        "Usability engineering",
+        "Web usability",
+        "Think aloud protocol",
+        "Heuristic evaluation",
+        "Pluralistic walkthrough",
+        "Usability inspection",
+        "Cognitive walkthrough",
+        "Usability lab",
+        "System usability scale",
+        "Usability goals",
+        "Component-based usability testing",
+        "User centred design",
+      ],
+    },
+    "Virtual reality": {
+      name: "Virtual reality",
+      id: "https://openalex.org/C194969405",
+      level: 2,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+      children: [
+        "Metaverse",
+        "Mixed reality",
+        "VRML",
+        "Instructional simulation",
+        "Computer-mediated reality",
+        "Virtual actor",
+        "Wired glove",
+        "Simulator sickness",
+        "Virtual training",
+        "Artificial reality",
+        "Immersive technology",
+        "X3D",
+        "Virtual Reality Exposure Therapy",
+        "Sense of presence",
+        "3D interaction",
+        "Collaborative virtual environment",
+        "Cave automatic virtual environment",
+      ],
+    },
+    Persona: {
+      name: "Persona",
+      id: "https://openalex.org/C313442",
+      level: 2,
+      description:
+        "fictional character created to represent the different user types within a targeted demographic",
+    },
+    "Augmented reality": {
+      name: "Augmented reality",
+      id: "https://openalex.org/C153715457",
+      level: 2,
+      description:
+        "interactive experience of a real-world environment enhanced by computer-generated perceptual information",
+      children: [
+        "Mixed reality",
+        "Computer-mediated reality",
+        "Artificial reality",
+        "Cave automatic virtual environment",
+      ],
+    },
+    "Modality (human–computer interaction)": {
+      name: "Modality (human–computer interaction)",
+      id: "https://openalex.org/C2780226545",
+      level: 2,
+      description:
+        "sense through which the human can receive the output of the computer or a sensor or device through which the computer can receive the input from the human",
+    },
+    "Ubiquitous computing": {
+      name: "Ubiquitous computing",
+      id: "https://openalex.org/C172195944",
+      level: 2,
+      description: "concept in software engineering and computer science",
+      children: [
+        "Context-aware pervasive systems",
+        "Context management",
+        "Content adaptation",
+        "Ubiquitous commerce",
+      ],
+    },
+    Affordance: {
+      name: "Affordance",
+      id: "https://openalex.org/C194995250",
+      level: 2,
+      description:
+        "affordance is the possibility of an action on an object or environment",
+    },
+    "Game design": {
+      name: "Game design",
+      id: "https://openalex.org/C503285160",
+      level: 2,
+      description:
+        "game development process of designing the content and rules of a game",
+      children: [
+        "Game Developer",
+        "Video game development",
+        "Video game design",
+        "Game design document",
+        "Game art design",
+        "Level design",
+        "Turns, rounds and time-keeping systems in games",
+        "Game programming",
+        "Game testing",
+        "Game development tool",
+        "Video game culture",
+        "Emergent gameplay",
+      ],
+    },
+    "Conceptual design": {
+      name: "Conceptual design",
+      id: "https://openalex.org/C120208923",
+      level: 2,
+      description: "art term",
+    },
+    "User experience design": {
+      name: "User experience design",
+      id: "https://openalex.org/C201025465",
+      level: 2,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+      children: [
+        "User interface design",
+        "Graphical user interface testing",
+        "Natural user interface",
+        "Computer user satisfaction",
+        "Interface metaphor",
+        "10-foot user interface",
+        "Post-WIMP",
+        "User Research",
+        "Experience design",
+        "Interactive systems engineering",
+        "User journey",
+        "Multiple document interface",
+        "Look and feel",
+        "Interface control document",
+      ],
+    },
+  },
+  {
+    "Technology acceptance model": {
+      name: "Technology acceptance model",
+      id: "C2776185967",
+      level: 3,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+    },
+    "Usability engineering": {
+      name: "Usability engineering",
+      id: "C100302975",
+      level: 3,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+      children: [
+        "Usability inspection",
+        "Cognitive walkthrough",
+        "Usability lab",
+        "System usability scale",
+        "Usability goals",
+        "Component-based usability testing",
+      ],
+    },
+    "Web usability": {
+      name: "Web usability",
+      id: "C4237393",
+      level: 3,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+      children: [
+        "Usability inspection",
+        "Cognitive walkthrough",
+        "System usability scale",
+        "Usability goals",
+        "Component-based usability testing",
+      ],
+    },
+    "Think aloud protocol": {
+      name: "Think aloud protocol",
+      id: "C78821406",
+      level: 3,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+    },
+    "Heuristic evaluation": {
+      name: "Heuristic evaluation",
+      id: "C3255780",
+      level: 3,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+      children: [
+        "Usability inspection",
+        "Cognitive walkthrough",
+        "System usability scale",
+        "Usability goals",
+        "Component-based usability testing",
+      ],
+    },
+    "Pluralistic walkthrough": {
+      name: "Pluralistic walkthrough",
+      id: "C188688815",
+      level: 3,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+      children: ["Cognitive walkthrough", "Usability goals"],
+    },
+    "User centred design": {
+      name: "User centred design",
+      id: "C2986124960",
+      level: 3,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+    },
+    Metaverse: {
+      name: "Metaverse",
+      id: "C53332860",
+      level: 3,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "Mixed reality": {
+      name: "Mixed reality",
+      id: "C206776904",
+      level: 3,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+      children: [
+        "Computer-mediated reality",
+        "Artificial reality",
+        "Cave automatic virtual environment",
+      ],
+    },
+    VRML: {
+      name: "VRML",
+      id: "C75625381",
+      level: 3,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+      children: ["X3D"],
+    },
+    "Instructional simulation": {
+      name: "Instructional simulation",
+      id: "C178624890",
+      level: 3,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "Virtual actor": {
+      name: "Virtual actor",
+      id: "C150303390",
+      level: 3,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "Wired glove": {
+      name: "Wired glove",
+      id: "C107953548",
+      level: 3,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "Simulator sickness": {
+      name: "Simulator sickness",
+      id: "C2776872670",
+      level: 3,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "Virtual training": {
+      name: "Virtual training",
+      id: "C2781350754",
+      level: 3,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "Immersive technology": {
+      name: "Immersive technology",
+      id: "C102132729",
+      level: 3,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "Virtual Reality Exposure Therapy": {
+      name: "Virtual Reality Exposure Therapy",
+      id: "C2910959060",
+      level: 3,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "Sense of presence": {
+      name: "Sense of presence",
+      id: "C2987143623",
+      level: 3,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "3D interaction": {
+      name: "3D interaction",
+      id: "C2776977519",
+      level: 3,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "Collaborative virtual environment": {
+      name: "Collaborative virtual environment",
+      id: "C2778477957",
+      level: 3,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "Context-aware pervasive systems": {
+      name: "Context-aware pervasive systems",
+      id: "C48052980",
+      level: 3,
+      description: "concept in software engineering and computer science",
+    },
+    "Context management": {
+      name: "Context management",
+      id: "C2776285913",
+      level: 3,
+      description: "concept in software engineering and computer science",
+    },
+    "Content adaptation": {
+      name: "Content adaptation",
+      id: "C2776987467",
+      level: 3,
+      description: "concept in software engineering and computer science",
+    },
+    "Ubiquitous commerce": {
+      name: "Ubiquitous commerce",
+      id: "C95837238",
+      level: 3,
+      description: "concept in software engineering and computer science",
+    },
+    "Game Developer": {
+      name: "Game Developer",
+      id: "C41826821",
+      level: 3,
+      description:
+        "game development process of designing the content and rules of a game",
+      children: [
+        "Game design document",
+        "Game art design",
+        "Game programming",
+        "Game testing",
+        "Game development tool",
+      ],
+    },
+    "Video game development": {
+      name: "Video game development",
+      id: "C54276265",
+      level: 3,
+      description:
+        "game development process of designing the content and rules of a game",
+      children: ["Game art design", "Game development tool"],
+    },
+    "Video game design": {
+      name: "Video game design",
+      id: "C47187476",
+      level: 3,
+      description:
+        "game development process of designing the content and rules of a game",
+      children: [
+        "Game art design",
+        "Turns, rounds and time-keeping systems in games",
+        "Game development tool",
+        "Video game culture",
+        "Emergent gameplay",
+      ],
+    },
+    "Level design": {
+      name: "Level design",
+      id: "C146508145",
+      level: 3,
+      description:
+        "game development process of designing the content and rules of a game",
+    },
+    "User interface design": {
+      name: "User interface design",
+      id: "C149229913",
+      level: 3,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+      children: [
+        "Graphical user interface testing",
+        "Natural user interface",
+        "Computer user satisfaction",
+        "Interface metaphor",
+        "10-foot user interface",
+        "Post-WIMP",
+        "Interactive systems engineering",
+        "User journey",
+        "Multiple document interface",
+        "Look and feel",
+        "Interface control document",
+      ],
+    },
+    "User Research": {
+      name: "User Research",
+      id: "C2777397297",
+      level: 3,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+    },
+    "Experience design": {
+      name: "Experience design",
+      id: "C9496109",
+      level: 3,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+    },
+  },
+  {
+    "Usability inspection": {
+      name: "Usability inspection",
+      id: "C23456302",
+      level: 4,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+      children: ["Component-based usability testing"],
+    },
+    "Cognitive walkthrough": {
+      name: "Cognitive walkthrough",
+      id: "C87105883",
+      level: 4,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+    },
+    "Usability lab": {
+      name: "Usability lab",
+      id: "C11324603",
+      level: 4,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+      children: ["Component-based usability testing"],
+    },
+    "System usability scale": {
+      name: "System usability scale",
+      id: "C139225968",
+      level: 4,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+    },
+    "Usability goals": {
+      name: "Usability goals",
+      id: "C62993174",
+      level: 4,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+    },
+    "Computer-mediated reality": {
+      name: "Computer-mediated reality",
+      id: "C134202134",
+      level: 4,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+      children: ["Artificial reality", "Cave automatic virtual environment"],
+    },
+    X3D: {
+      name: "X3D",
+      id: "C49902421",
+      level: 4,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "Game design document": {
+      name: "Game design document",
+      id: "C6907630",
+      level: 4,
+      description:
+        "game development process of designing the content and rules of a game",
+      children: ["Game programming", "Game testing", "Game development tool"],
+    },
+    "Game art design": {
+      name: "Game art design",
+      id: "C80646779",
+      level: 4,
+      description:
+        "game development process of designing the content and rules of a game",
+      children: ["Game development tool"],
+    },
+    "Turns, rounds and time-keeping systems in games": {
+      name: "Turns, rounds and time-keeping systems in games",
+      id: "C56694532",
+      level: 4,
+      description:
+        "game development process of designing the content and rules of a game",
+      children: ["Video game culture", "Emergent gameplay"],
+    },
+    "Graphical user interface testing": {
+      name: "Graphical user interface testing",
+      id: "C66153210",
+      level: 4,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+      children: [
+        "Interface metaphor",
+        "Post-WIMP",
+        "Multiple document interface",
+      ],
+    },
+    "Natural user interface": {
+      name: "Natural user interface",
+      id: "C187482481",
+      level: 4,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+      children: [
+        "Interface metaphor",
+        "Post-WIMP",
+        "Multiple document interface",
+      ],
+    },
+    "Computer user satisfaction": {
+      name: "Computer user satisfaction",
+      id: "C63880386",
+      level: 4,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+      children: ["User journey"],
+    },
+    "10-foot user interface": {
+      name: "10-foot user interface",
+      id: "C197070257",
+      level: 4,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+      children: ["Interface metaphor", "Multiple document interface"],
+    },
+    "Interactive systems engineering": {
+      name: "Interactive systems engineering",
+      id: "C40458791",
+      level: 4,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+    },
+    "Look and feel": {
+      name: "Look and feel",
+      id: "C39510489",
+      level: 4,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+    },
+    "Interface control document": {
+      name: "Interface control document",
+      id: "C139965803",
+      level: 4,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+    },
+  },
+  {
+    "Component-based usability testing": {
+      name: "Component-based usability testing",
+      id: "C71151206",
+      level: 5,
+      description:
+        "learnability and ease-of-use of a helpful tool, system, etc. intended for human use",
+    },
+    "Artificial reality": {
+      name: "Artificial reality",
+      id: "C8678698",
+      level: 5,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "Cave automatic virtual environment": {
+      name: "Cave automatic virtual environment",
+      id: "C55830036",
+      level: 5,
+      description:
+        "computer-simulated environment simulating physical presence in real or imagined worlds",
+    },
+    "Game programming": {
+      name: "Game programming",
+      id: "C109347269",
+      level: 5,
+      description:
+        "game development process of designing the content and rules of a game",
+    },
+    "Game testing": {
+      name: "Game testing",
+      id: "C7591567",
+      level: 5,
+      description:
+        "game development process of designing the content and rules of a game",
+    },
+    "Game development tool": {
+      name: "Game development tool",
+      id: "C35674477",
+      level: 5,
+      description:
+        "game development process of designing the content and rules of a game",
+    },
+    "Video game culture": {
+      name: "Video game culture",
+      id: "C542774390",
+      level: 5,
+      description:
+        "game development process of designing the content and rules of a game",
+    },
+    "Emergent gameplay": {
+      name: "Emergent gameplay",
+      id: "C92259163",
+      level: 5,
+      description:
+        "game development process of designing the content and rules of a game",
+    },
+    "Interface metaphor": {
+      name: "Interface metaphor",
+      id: "C130858515",
+      level: 5,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+    },
+    "Post-WIMP": {
+      name: "Post-WIMP",
+      id: "C163847158",
+      level: 5,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+    },
+    "Multiple document interface": {
+      name: "Multiple document interface",
+      id: "C125367622",
+      level: 5,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+    },
+    "User journey": {
+      name: "User journey",
+      id: "C17302071",
+      level: 5,
+      description:
+        "field of design focusing on the creation of user centered products and services",
+    },
+  },
+];
+
+const dataset = data.map((level) =>
+  Object.values(level).map((concept) => {
+    return {
+      name: concept.name,
+      value: 1,
+      id: concept.id.slice(22),
+    };
+  })
+);
+
+const allConceptsObj = {};
+data.forEach((level) => {
+  Object.values(level).forEach(
+    (concept) =>
+      (allConceptsObj[concept.name] = {
+        level: concept.level,
+        children: concept.children || null,
+        description: concept.description,
+      })
+  );
+});
+
+const top12ConceptsObj = {
+  "Mode (computer interface)":
+    "https://api.openalex.org/works?filter=concepts.id:C48677424",
+  Usability: "https://api.openalex.org/works?filter=concepts.id:C170130773",
+  "Virtual reality":
+    "https://api.openalex.org/works?filter=concepts.id:C194969405",
+  Persona: "https://api.openalex.org/works?filter=concepts.id:C313442",
+  "Augmented reality":
+    "https://api.openalex.org/works?filter=concepts.id:C153715457",
+  "Modality (human\u2013computer interaction)":
+    "https://api.openalex.org/works?filter=concepts.id:C2780226545",
+  "Ubiquitous computing":
+    "https://api.openalex.org/works?filter=concepts.id:C172195944",
+  Affordance: "https://api.openalex.org/works?filter=concepts.id:C194995250",
+  "Game design": "https://api.openalex.org/works?filter=concepts.id:C503285160",
+  "Technology acceptance model":
+    "https://api.openalex.org/works?filter=concepts.id:C2776185967",
+  "Conceptual design":
+    "https://api.openalex.org/works?filter=concepts.id:C120208923",
+  "User experience design":
+    "https://api.openalex.org/works?filter=concepts.id:C201025465",
+};
+
+const top12Concepts = {};
+
+Object.keys(top12ConceptsObj).forEach((conceptName, index) => {
+  top12Concepts[conceptName] = `Ranking ${index + 1}`;
+});
+
+export { dataset, allConceptsObj, top12Concepts };
+// console.log(dataset);
+// console.log(allConceptsObj);
+// console.log(Object.keys(allConceptsObj).length);

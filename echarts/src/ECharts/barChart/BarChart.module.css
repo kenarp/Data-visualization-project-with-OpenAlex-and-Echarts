@@ -1,0 +1,56 @@
+.githubLink {
+  position: absolute;
+  left: 2%;
+  top: 75%;
+  z-index: 1;
+  text-decoration: none;
+  color: #333;
+}
+
+.githubLink img {
+  width: 10%;
+}
+.concept {
+  color: #333;
+  position: absolute;
+  /* z-index: 0; */
+  left: 2%;
+  top: 35%;
+  max-width: 20%;
+  word-wrap: break-word;
+}
+
+.concept h3 {
+  margin-bottom: 0%;
+}
+
+.conceptLevel {
+  font-size: 14px;
+  margin-left: 5%;
+  margin-right: 0%;
+  margin-top: 0%;
+  width: 100%;
+}
+
+.subtitle {
+  margin-bottom: 2%;
+  font-size: 14px;
+}
+.conceptDescription {
+  position: absolute;
+  padding-left: 4%;
+}
+
+.conceptDescription p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  width: 100%;
+  word-break: break-all;
+}
+.borderLine {
+  position: absolute;
+  top: 3%;
+  bottom: 0%;
+  left: 0%;
+}
